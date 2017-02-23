@@ -1,8 +1,6 @@
 var gulp = require('gulp');
 var cfg = require('./gulp-config.js');
 
-console.log(cfg.plugins);
-
 let get = task => require('./gulp-tasks/' + task)(gulp, cfg.plugins, cfg.dest);
 
 gulp.task('nodemon', () => get('nodemon'));
